@@ -20,7 +20,7 @@ app.use(cookieParser());
 
 const corsOptions = {
     // origin:'http://localhost:5173',
-    origin:'https://jobportal-website-1eh9.onrender.com',
+    origin:'https://job-portal-website-khaki.vercel.app',
     credentials:true
 }
 

@@ -21,7 +21,7 @@ app.use(cookieParser());
 const corsOptions = {
   origin: [
     "https://job-portal-website-khaki.vercel.app", // your frontend (Vercel)
-    "http://localhost:3000" // local dev (optional)
+    "http://localhost:5173" // local dev (optional)
   ],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],

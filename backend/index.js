@@ -18,18 +18,23 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // ---------- CORS Fix ----------
-const corsOptions = {
-  origin: [
-    "https://job-portal-website-khaki.vercel.app", // your frontend (Vercel)
-    "http://localhost:5173" // local dev (optional)
-  ],
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-};
 
-app.use(cors(corsOptions));
-app.options("*", cors(corsOptions)); // handle preflight requests
+
+
+
+app.use(cors());
+// const corsOptions = {
+//   origin: [
+//     "https://job-portal-website-khaki.vercel.app", // your frontend (Vercel)
+//     "http://localhost:5173" // local dev (optional)
+//   ],
+//   credentials: true,
+//   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+//   allowedHeaders: ["Content-Type", "Authorization"]
+// };
+
+// app.use(cors(corsOptions));
+// app.options("*", cors(corsOptions)); // handle preflight requests
 
 // ---------- Routes ----------
 app.use("/api/v1/user", userRoute);

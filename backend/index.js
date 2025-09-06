@@ -1,4 +1,3 @@
-
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -13,36 +12,38 @@ dotenv.config({});
 
 const app = express();
 
-// middleware
+// ---------- Middleware ----------
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-const corsOptions ={
-    origin:'https://job-portal-website-khaki.vercel.app',
-    credentials:true
-}
+// ---------- CORS Fix ----------
+const corsOptions = {
+  origin: [
+    "https://job-portal-website-khaki.vercel.app", // your frontend (Vercel)
+    "http://localhost:3000" // local dev (optional)
+  ],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+};
 
 app.use(cors(corsOptions));
+app.options("*", cors(corsOptions)); // handle preflight requests
 
-const PORT = process.env.PORT || 3000;
-
-
-// api's
+// ---------- Routes ----------
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 
-app.get('/', (req, res) => {
-  res.send('Hello World')
-})
-
-
-
-
-app.listen(PORT,()=>{
-    connectDB();
-    console.log(`Server running at port ${PORT}`);
-})
+// ---------- Start Server ----------
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  connectDB();
+  console.log(`Server running at port ${PORT}`);
+});

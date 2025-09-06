@@ -46,6 +46,11 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
+
+app.get("/api/v1/user", (req, res) => {
+  res.send(user);
+});
+
 // ---------- Start Server ----------
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

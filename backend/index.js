@@ -19,7 +19,6 @@ app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 
 const corsOptions ={
-    
     origin:'https://job-portal-website-khaki.vercel.app',
     credentials:true
 }

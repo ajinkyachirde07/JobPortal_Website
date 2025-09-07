@@ -22,7 +22,28 @@ app.use(cookieParser());
 
 
 
+import cors from "cors";
+import express from "express";
+
+const app = express();
+
+// Allow all origins
 app.use(cors());
+
+// // Or with options
+// app.use(cors({
+//   origin: "*",     // Allow all domains
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+//   allowedHeaders: ["Content-Type", "Authorization"]
+// }));
+
+
+
+
+
+
+
+// app.use(cors());
 // const corsOptions = {
 //   origin: [
 //     "https://job-portal-website-khaki.vercel.app", // your frontend (Vercel)

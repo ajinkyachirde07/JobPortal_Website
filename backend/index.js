@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./utils/db.js";
+import mongoose from "mongoose";
 
 // Import routes
 import userRoute from "./routes/user.route.js";

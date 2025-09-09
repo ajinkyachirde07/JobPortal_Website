@@ -47,36 +47,58 @@ app.use("/api/v1/application", applicationRoute);
 // });
 
 
+// app.get("/", (req, res) => {
+//   const dbState = mongoose.connection.readyState; 
+//   // 0 = disconnected, 1 = connected, 2 = connecting, 3 = disconnecting
+
+//   let dbStatus = "";
+//   switch (dbState) {
+//     case 0:
+//       dbStatus = "❌ Disconnected";
+//       break;
+//     case 1:
+//       dbStatus = "✅ Connected";
+//       break;
+//     case 2:
+//       dbStatus = "🔄 Connecting";
+//       break;
+//     case 3:
+//       dbStatus = "⚠️ Disconnecting";
+//       break;
+//     default:
+//       dbStatus = "Unknown";
+//   }
+
+//   res.json({
+//     message: "API is running",
+//     database: dbStatus,
+//   });
+// });
+
+
+
+
+// Health check route
 app.get("/", (req, res) => {
-  const dbState = mongoose.connection.readyState; 
-  // 0 = disconnected, 1 = connected, 2 = connecting, 3 = disconnecting
+  try {
+    const dbState = mongoose.connection.readyState;
+    // Map states to text
+    const states = {
+      0: "❌ Disconnected",
+      1: "✅ Connected",
+      2: "🔄 Connecting",
+      3: "⚠️ Disconnecting"
+    };
 
-  let dbStatus = "";
-  switch (dbState) {
-    case 0:
-      dbStatus = "❌ Disconnected";
-      break;
-    case 1:
-      dbStatus = "✅ Connected";
-      break;
-    case 2:
-      dbStatus = "🔄 Connecting";
-      break;
-    case 3:
-      dbStatus = "⚠️ Disconnecting";
-      break;
-    default:
-      dbStatus = "Unknown";
+    res.status(200).json({
+      message: "API is running",
+      database: states[dbState] || "Unknown"
+    });
+  } catch (err) {
+    console.error("Health check error:", err.message);
+    res.status(500).json({ message: "Internal Server Error" });
   }
-
-  res.json({
-    message: "API is running",
-    database: dbStatus,
-  });
 });
-
-
-
 
 
 

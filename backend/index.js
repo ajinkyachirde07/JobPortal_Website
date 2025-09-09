@@ -40,11 +40,60 @@ app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
 
 // Test route
-app.get("/", (req, res) => {
-  res.send("Hello World from Backend!");
+// app.get("/", (req, res) => {
+//   res.send("Hello World from Backend!");
   
 
+// });
+
+
+app.get("/", (req, res) => {
+  const dbState = mongoose.connection.readyState; 
+  // 0 = disconnected, 1 = connected, 2 = connecting, 3 = disconnecting
+
+  let dbStatus = "";
+  switch (dbState) {
+    case 0:
+      dbStatus = "❌ Disconnected";
+      break;
+    case 1:
+      dbStatus = "✅ Connected";
+      break;
+    case 2:
+      dbStatus = "🔄 Connecting";
+      break;
+    case 3:
+      dbStatus = "⚠️ Disconnecting";
+      break;
+    default:
+      dbStatus = "Unknown";
+  }
+
+  res.json({
+    message: "API is running",
+    database: dbStatus,
+  });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ✅ Show all users
 app.get("/api/v1/all-users", async (req, res) => {
@@ -72,3 +121,5 @@ app.listen(PORT, () => {
   connectDB();
   console.log(`Server running at port ${PORT}`);
 });
+
+

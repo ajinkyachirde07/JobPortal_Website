@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Navbar from './components/shared/Navbar'
 import Login from './components/auth/Login'
 import Signup from './components/auth/Signup'
 import Home from './components/Home'
@@ -14,6 +13,11 @@ import AdminJobs from "./components/admin/AdminJobs";
 import PostJob from './components/admin/PostJob'
 import Applicants from './components/admin/Applicants'
 import ProtectedRoute from './components/admin/ProtectedRoute'
+import AboutUs from './components/AboutUs'
+import ContactUs from './components/ContactUs'
+import Disclaimer from './components/Disclaimer'
+import Policy from './components/Policy'
+
 
 
 const appRouter = createBrowserRouter([
@@ -34,13 +38,33 @@ const appRouter = createBrowserRouter([
     element: <Jobs />
   },
   {
-    path: "/description/:id",
+    path: "/jobpost/:id",
     element: <JobDescription />
   },
   {
     path: "/browse",
     element: <Browse />
   },
+
+  {
+    path: "/AboutUs",
+    element: <AboutUs />
+  },
+
+   {
+    path: "/ContactUs",
+    element: <ContactUs />
+  },
+  {
+    path: "/Disclaimer",
+    element: <Disclaimer />
+  },
+  {
+    path: "/Policy",
+    element: <Policy />
+  },
+
+
   {
     path: "/profile",
     element: <Profile />

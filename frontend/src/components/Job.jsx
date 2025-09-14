@@ -69,7 +69,7 @@ const Job = ({ job }) => {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-4">
                 <Button
-                    onClick={() => navigate(`/description/${job?._id}`)}
+                    onClick={() => navigate(`/jobpost/${job?._id}`)}
                     variant="outline"
                     className="w-full sm:w-auto"
                 >

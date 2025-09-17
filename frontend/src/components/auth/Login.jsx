@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from '../shared/Navbar'
 import { Label } from '../ui/label'
 import { Input } from '../ui/input'
@@ -73,7 +73,7 @@ const Login = () => {
               value={input.email}
               name="email"
               onChange={changeEventHandler}
-              placeholder="patel@gmail.com"
+              placeholder="youremail@example.com"
               required
             />
           </div>

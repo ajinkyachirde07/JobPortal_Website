@@ -16,7 +16,7 @@ const Signup = () => {
   const [input, setInput] = useState({
     fullname: "",
     email: "",
-    phoneNumber: "",
+    phoneNumber:"",
     password: "",
     role: "",
     file: ""

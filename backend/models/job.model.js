@@ -43,8 +43,8 @@ const jobSchema = new mongoose.Schema({
         required: true
     },
     position: {
-        type: Number,
-        required: true
+        type: String,
+        
     },
     company: {
         type: mongoose.Schema.Types.ObjectId,

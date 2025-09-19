@@ -102,7 +102,7 @@ export const login = async (req, res) => {
     return res
       .status(200)
       .cookie("token", token, {
-        httpsOnly: true,
+        httpOnly: true,
         secure: process.env.NODE_ENV === "production", // true on Render
         sameSite: "none", // critical for cross-domain
         maxAge: 1 * 24 * 60 * 60 * 1000,
@@ -119,10 +119,19 @@ export const login = async (req, res) => {
 };
 export const logout = async (req, res) => {
   try {
-    return res.status(200).cookie("token", "", { maxAge: 0 }).json({
-      message: "Logged out successfully.",
-      success: true,
-    });
+    return res
+      .status(200)
+      .cookie("token", "", {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "none",
+        expires: new Date(0), // clear cookie
+        path: "/",
+      })
+      .json({
+        message: "Logged out successfully.",
+        success: true,
+      });
   } catch (error) {
     console.log(error);
   }

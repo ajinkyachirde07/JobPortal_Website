@@ -32,10 +32,10 @@ export const register = async (req, res) => {
             email,
             phoneNumber,
             password: hashedPassword,
-            role,
             profile:{
                 profilePhoto:cloudResponse.secure_url,
-            }
+            },
+            role
         });
 
         return res.status(201).json({
@@ -138,7 +138,7 @@ export const updateProfile = async (req, res) => {
         // updating data
         if(fullname) user.fullname = fullname
         if(email) user.email = email
-        if(phoneNumber)  user.phoneNumber = phoneNumber
+        if(phoneNumber) user.phoneNumber = phoneNumber
         if(bio) user.profile.bio = bio
         if(skills) user.profile.skills = skillsArray
       

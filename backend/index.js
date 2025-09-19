@@ -4,11 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./utils/db.js";
 import mongoose from "mongoose";
-import path from "path";
-import { fileURLToPath } from "url";  
-import { dirname } from "path";
-import jwt from "jsonwebtoken";
-import cookieParser from "cookie-parser";
+
 
 // Import routes
 import userRoute from "./routes/user.route.js";
@@ -35,15 +31,11 @@ app.use(
     origin: ["https://job-portal-website-khaki.vercel.app","http://localhost:5173"],       // your frontend origin
     credentials:true, // allow cookies / authorization headers
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    allowedHeaders: ["Content-Type", "Authorization"]
   })
 );
 
 
-res.cookie("token", token, {
-  httpOnly: true,
-  sameSite: "none", // important for cross-site cookies
-});
 
 
 

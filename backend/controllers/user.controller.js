@@ -102,7 +102,7 @@ export const login = async (req, res) => {
     return res
       .status(200)
       .cookie("token", token, {
-        httpOnly: true,
+        httpsOnly: true,
         secure: process.env.NODE_ENV === "production", // true on Render
         sameSite: "none", // critical for cross-domain
         maxAge: 1 * 24 * 60 * 60 * 1000,

@@ -34,6 +34,22 @@ app.use(
   })
 );
 
+
+res.cookie("token", token, {
+  httpOnly: true,
+  secure: process.env.NODE_ENV === "production", // true on Render
+  sameSite: "none", // important for cross-site cookies
+});
+
+
+
+
+
+
+
+
+
+
 // ---------- Routes ----------
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company", companyRoute);

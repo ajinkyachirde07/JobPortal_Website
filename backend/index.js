@@ -4,6 +4,11 @@ import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./utils/db.js";
 import mongoose from "mongoose";
+import path from "path";
+import { fileURLToPath } from "url";  
+import { dirname } from "path";
+import jwt from "jsonwebtoken";
+import cookieParser from "cookie-parser";
 
 // Import routes
 import userRoute from "./routes/user.route.js";

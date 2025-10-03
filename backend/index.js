@@ -29,24 +29,13 @@ app.use(cookieParser());
 
 
 app.use(cors({
-    origin:["http://localhost:5173", "https://job-portal-website-khaki.vercel.app"],  // your frontend origin
+    origin:["https://job-portal-website-khaki.vercel.app"],  // your frontend origin
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     withCredentials: true
 }));
 
-// app.use(
-//   cors({
-//     origin: ["https://job-portal-website-khaki.vercel.app"],       // your frontend origin
-//     credentials:true, // allow cookies / authorization headers
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     allowedHeaders: ["Content-Type", "Authorization"],
-//     withCredentials: true
-//   })
-// );
-
-// "http://localhost:5173"
 
 // ---------- Routes ----------
 app.use("/api/v1/user", userRoute);

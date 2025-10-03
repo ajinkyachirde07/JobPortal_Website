@@ -29,7 +29,7 @@ const PostJob = () => {
     location: "",
     jobType: "",
     experience: "",
-    position: 0,
+    position: "",
     companyId: "",
   });
   const [loading, setLoading] = useState(false);

@@ -71,8 +71,6 @@ const JobDescription = () => {
     fetchSingleJob();
   }, [jobId, dispatch, user?._id]);
 
-  
-
   return (
     <div className="w-screen">
       <Navbar />
@@ -85,13 +83,13 @@ const JobDescription = () => {
             </h1>
             <div className="flex flex-wrap items-center gap-2 mt-3">
               <Badge className="text-blue-700 font-bold" variant="ghost">
-                {singleJob?.position}+ vacancy
+                {singleJob?.position} 10,000 + Vacancy
               </Badge>
               <Badge className="text-[#F83002] font-bold" variant="ghost">
-                {singleJob?.jobType} Industry
+                {singleJob?.jobType} Corporate Industry
               </Badge>
               <Badge className="text-[#7209b7] font-bold" variant="ghost">
-                {singleJob?.salary} LPA
+                {singleJob?.salary} LPA Salary
               </Badge>
             </div>
           </div>
@@ -111,58 +109,67 @@ const JobDescription = () => {
           )} */}
         </div>
 
-        {/* Job Description */}
-        <section className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="md:col-span-3 text-justify">
-            <div
-              className="my-6 prose max-w-none"
-              dangerouslySetInnerHTML={{ __html: singleJob?.about }}
-            />
+        
+        <div>
+          
+            {" "}
+             <div className="mt-6 text-justify">
+              {singleJob?.description}
+             </div>
+              
+          <section className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="md:col-span-3 text-justify">
+              <div
+                className="my-6 prose max-w-none"
+                dangerouslySetInnerHTML={{ __html: singleJob?.about }}
+              />
 
-            <h2 className="font-bold text-lg mt-6">How to Apply</h2>
-            <p className="mt-2">
-              Freshers who are passionate about technology and eager to grow in
-              their career should not miss this chance. This role is a golden
-              opportunity to work with mentors, gain real-world experience, and
-              start strong in the IT industry.
-            </p>
-            <p className="mt-2">👉 [Apply link is given below]</p>
+              <h2 className="font-bold text-lg mt-6">How to Apply</h2>
+              <p className="mt-2">
+                Freshers who are passionate about technology and eager to grow
+                in their career should not miss this chance. This role is a
+                golden opportunity to work with mentors, gain real-world
+                experience, and start strong in the IT industry.
+              </p>
+              <p className="mt-2">👉 [Apply link is given below]</p>
 
-            <h2 className="font-bold text-lg mt-6">Final Thoughts</h2>
-            <p className="mt-2">
-              If you are a B.Tech 2025 fresher looking to build your career in
-              software development, this role offers the perfect balance of
-              learning and growth. Don’t wait — kickstart your career today! 🌟
-            </p>
+              <h2 className="font-bold text-lg mt-6">Final Thoughts</h2>
+              <p className="mt-2">
+                If you are a B.Tech 2025 fresher looking to build your career in
+                software development, this role offers the perfect balance of
+                learning and growth. Don’t wait — kickstart your career today!
+                🌟
+              </p>
 
-            <Button
-              onClick={() => window.open(singleJob?.applylink, "_blank")}
-              className="bg-[#7209b7] mt-4 w-full sm:w-auto"
-            >
-              Apply Link
-            </Button>
+              <Button
+                onClick={() => window.open(singleJob?.applylink, "_blank")}
+                className="bg-[#7209b7] mt-4 w-full sm:w-auto"
+              >
+                Apply Link
+              </Button>
 
-            <div className="mt-6">
-              <strong>
-                Join our WhatsApp Channel{" "}
-                <a
-                  href="https://www.whatsapp.com/channel/0029Vb5pzqx9Gv7NQVii641u"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <mark>Click Here</mark>
-                </a>
-              </strong>
+              <div className="mt-6">
+                <strong>
+                  Join our WhatsApp Channel{" "}
+                  <a
+                    href="https://www.whatsapp.com/channel/0029Vb5pzqx9Gv7NQVii641u"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <mark>Click Here</mark>
+                  </a>
+                </strong>
+              </div>
+
+              <h3 className="font-bold mt-6">
+                Posted Date:{" "}
+                <span className="font-normal text-gray-800">
+                  {singleJob?.createdAt.split("T")[0]}
+                </span>
+              </h3>
             </div>
-
-            <h3 className="font-bold mt-6">
-              Posted Date:{" "}
-              <span className="font-normal text-gray-800">
-                {singleJob?.createdAt.split("T")[0]}
-              </span>
-            </h3>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
       <Footer />
     </div>

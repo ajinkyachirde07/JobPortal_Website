@@ -41,3 +41,5 @@ export const {
     setSearchedQuery
 } = jobSlice.actions;
 export default jobSlice.reducer;
+
+

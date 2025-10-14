@@ -1,41 +1,58 @@
+import isAuthenticated from "../middlewares/isAuthenticated.js";
 import { Job } from "../models/job.model.js";
 
-// admin post krega job
-export const postJob = async (req, res) => {
-    try {
-        const { title, description, Information, about, applylink, requirements , salary, location, jobType, experience, position, companyId } = req.body;
-        const userId = req.id;
 
-        if (!title || !description || !requirements || !salary || !location || !jobType || !experience || !position || !companyId) {
-            return res.status(400).json({
-                message: "Somethin is missing.",
-                success: false
-            })
-        };
-        const job = await Job.create({
-            title,
-            description,
-            Information,
-            about,
-            applylink,
-            requirements,
-            salary: salary,
-            location,
-            jobType,
-            experienceLevel: experience,
-            position,
-            company: companyId,
-            created_by: userId
-        });
-        return res.status(201).json({
-            message: "New job created successfully.",
-            job,
-            success: true
-        });
-    } catch (error) {
-        console.log(error);
+// admin post krega job
+
+export const postJob = async (req, res) => {
+  try {
+    const { title, description, about, applylink, companyId } = req.body;
+    const userId = req.id;
+    // console.log("🧠 req.body:", req.body);
+    // console.log("🧠 req.id:", req.id);
+
+    if (!title || !description || !companyId || !userId) {
+      return res.status(400).json({
+        message: "Missing required fields.",
+        success: false,
+      });
     }
-}
+
+    const job = await Job.create({
+      title,
+      description,
+      about,
+      applylink,
+      company: companyId,
+      created_by: userId,
+    });
+
+    console.log("Job created:", job);
+
+    return res.status(201).json({
+      message: "New job created successfully.",
+      job,
+      success: true,
+    });
+  } catch (error) {
+    console.error("Error in postJob:", error);
+    return res.status(500).json({
+      message: "Server error while posting job.",
+      success: false,
+    });
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
 // student k liye
 export const getAllJobs = async (req, res) => {
     try {

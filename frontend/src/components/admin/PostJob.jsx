@@ -24,12 +24,8 @@ const PostJob = () => {
   const [input, setInput] = useState({
     title: "",
     description: "",
-    requirements: "",
-    salary: "",
-    location: "",
-    jobType: "",
-    experience: "",
-    position: "",
+    about: "",
+    applylink: "",
     companyId: "",
   });
   const [loading, setLoading] = useState(false);
@@ -89,41 +85,19 @@ const PostJob = () => {
             </div>
 
             <div>
-              <Label>Description</Label>
-              <Input
-                type="text"
+              <Label>About </Label>
+              <textarea
                 name="description"
                 value={input.description}
                 onChange={changeEventHandler}
-                className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1"
+                rows={6} // controls height
+                placeholder="Enter job description..."
+                className="w-full border border-gray-300 rounded-md p-2 my-1 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
               />
             </div>
-            <div>
-              <Label>More Information</Label>
-              <Input
-                type="text"
-                name="Information"
-                value={input.Information}
-                onChange={changeEventHandler}
-                className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1"
-              />
-            </div>
-
-            {/* <div>
-              <label htmlFor="about">about</label>
-              <textarea
-                type="text"
-                id="about"
-                name="about"
-                value={input.about}
-                onChange={changeEventHandler}
-                className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent my-1"
-                rows="4"
-              ></textarea>
-            </div> */}
 
             <div className="col-span-2">
-              <Label>about</Label>
+              <Label>Info</Label>
               <ReactQuill
                 theme="snow"
                 value={input.about}
@@ -133,7 +107,7 @@ const PostJob = () => {
             </div>
 
             <div>
-              <Label>Apply link</Label>
+              <Label>Apply Link</Label>
               <Input
                 type="text"
                 name="applylink"
@@ -143,7 +117,7 @@ const PostJob = () => {
               />
             </div>
 
-            <div>
+            {/* <div>
               <Label>Requirements</Label>
               <Input
                 type="text"
@@ -152,8 +126,8 @@ const PostJob = () => {
                 onChange={changeEventHandler}
                 className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1"
               />
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <Label>Salary</Label>
               <Input
                 type="text"
@@ -162,8 +136,8 @@ const PostJob = () => {
                 onChange={changeEventHandler}
                 className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1"
               />
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <Label>Location</Label>
               <Input
                 type="text"
@@ -172,8 +146,8 @@ const PostJob = () => {
                 onChange={changeEventHandler}
                 className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1"
               />
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <Label>Job Type</Label>
               <Input
                 type="text"
@@ -192,8 +166,8 @@ const PostJob = () => {
                 onChange={changeEventHandler}
                 className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1"
               />
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <Label>No of Postion</Label>
               <Input
                 type="number"
@@ -202,7 +176,9 @@ const PostJob = () => {
                 onChange={changeEventHandler}
                 className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1"
               />
-            </div>
+            </div> */}
+             <div className="col-span-2">
+              <Label>Company</Label>
             {companies.length > 0 && (
               <Select onValueChange={selectChangeHandler}>
                 <SelectTrigger className="w-[180px]">
@@ -224,6 +200,7 @@ const PostJob = () => {
                 </SelectContent>
               </Select>
             )}
+            </div>
           </div>
           {loading ? (
             <Button className="w-full my-4">

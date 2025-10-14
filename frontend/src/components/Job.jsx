@@ -16,18 +16,20 @@ const Job = ({ job }) => {
     }
 
     return (
-        <div className="p-4 sm:p-5 rounded-md shadow-xl bg-white border border-gray-100 w-full">
+        <div   onClick={()=> navigate(`/jobpost/${job._id}`)}  className="p-4 sm:p-5 rounded-md shadow-xl bg-white border border-gray-100 w-full">
             
             {/* Top row (date + bookmark) */}
+
+
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <p className="text-xs sm:text-sm text-gray-500">
                     {daysAgoFunction(job?.createdAt) === 0
                         ? "Today"
                         : `${daysAgoFunction(job?.createdAt)} days ago`}
                 </p>
-                <Button variant="outline" className="rounded-full self-end sm:self-auto" size="icon">
+                {/* <Button variant="outline" className="rounded-full self-end sm:self-auto" size="icon">
                     <Bookmark />
-                </Button>
+                </Button> */}
             </div>
 
             {/* Company Info */}
@@ -49,13 +51,13 @@ const Job = ({ job }) => {
             {/* Badges */}
             <div className="flex flex-wrap items-center gap-2 mt-4">
                 <Badge className="text-blue-700 font-bold text-xs sm:text-sm" variant="ghost">
-                    {job?.position}+ Positions
+                    {job?.position} 10,000 + Positions
                 </Badge>
                 <Badge className="text-[#F83002] font-bold text-xs sm:text-sm" variant="ghost">
-                    {job?.jobType}
+                    {job?.jobType} Corporate Job 
                 </Badge>
                 <Badge className="text-[#7209b7] font-bold text-xs sm:text-sm" variant="ghost">
-                    {job?.salary} LPA
+                    {job?.salary} LPA Salary 
                 </Badge>
             </div>
 

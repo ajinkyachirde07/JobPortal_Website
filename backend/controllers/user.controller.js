@@ -47,7 +47,6 @@ export const register = async (req, res) => {
     }
 }
 
-
 export const login = async (req, res) => {
     try {
         const { email, password, role } = req.body;
@@ -94,7 +93,7 @@ export const login = async (req, res) => {
             profile: user.profile
         }
 
-        return res.status(200).cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000 }).json({
+        return res.status(200).cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpsOnly: true, sameSite: 'strict' }).json({
             message: `Welcome back ${user.fullname}`,
             user,
             success: true
@@ -103,9 +102,6 @@ export const login = async (req, res) => {
         console.log(error);
     }
 }
-
-
-
 
 
 

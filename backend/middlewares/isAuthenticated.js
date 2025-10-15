@@ -17,6 +17,9 @@ const isAuthenticated = async (req, res, next) => {
             })
         };
         req.id = decode.userId;
+          httpOnly: true,
+        secure: true,        // true in production
+         sameSite: "none"
        
 
         next();
@@ -26,3 +29,9 @@ const isAuthenticated = async (req, res, next) => {
     }
 }
 export default isAuthenticated;
+
+
+
+
+
+

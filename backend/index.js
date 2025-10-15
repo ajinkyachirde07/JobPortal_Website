@@ -29,7 +29,9 @@ app.use(cookieParser());
 
 
 app.use(cors({
-    origin:"https://job-portal-website-khaki.vercel.app",
+    origin:["https://job-portal-website-khaki.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
       // your frontend origin
     credentials: true,
 }));

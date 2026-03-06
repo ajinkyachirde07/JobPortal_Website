@@ -18,7 +18,7 @@ export default function AboutUs() {
         <div className="lg:col-span-2 space-y-6">
           <h1 className=" font-bold text-lg sm:text-xl ">About Us</h1>
           <p>
-            Welcome to <span className="font-semibold">Jobcode</span>, your{" "}
+            Welcome to <span className="font-semibold">HireNext</span>, your{" "}
             <span className="font-semibold">one-click solution</span> to staying
             updated with the latest tech job openings, internships, coding
             roadmaps, and career insights. We understand that{" "}
@@ -48,10 +48,10 @@ export default function AboutUs() {
           </ul>
 
           <h2 className="text-xl font-semibold">Get in Touch</h2>
-          <p>📧 Email: info@jobcode.in</p>
+          <p>📧 Email: info@hireNext.in</p>
           <p>💬 WhatsApp: Join Group</p>
-          <p>🌐 Website: www.jobcode.in</p>
-          <p>📲 Follow us: @jobcodeteam</p>
+          <p>🌐 Website: www.HireNext.in</p>
+          <p>📲 Follow us: @HireNext</p>
 
           <h2 className="text-xl font-semibold">Your Future Starts Here!</h2>
           <p>

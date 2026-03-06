@@ -160,11 +160,11 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex gap-3">
-              <a href="likedin.com" className="bg-blue-600 p-2 rounded text-white"><FaLinkedinIn /></a>
-              <a href="telegram.com" className="bg-black p-2 rounded text-white"><FaTelegramPlane /></a>
-              <a href="whatsapp.com" className="bg-green-600 p-2 rounded text-white"><FaWhatsapp /></a>
-              <a href="instagram.com" className="bg-pink-600 p-2 rounded text-white"><FaInstagram /></a>
-              <a href="facebook.com" className="bg-red-600 p-2 rounded text-white"><FaFacebookF /></a>
+              <a href="https://www.likedin.com" className="bg-blue-600 p-2 rounded text-white"><FaLinkedinIn /></a>
+              <a href="https://www.telegram.com" className="bg-black p-2 rounded text-white"><FaTelegramPlane /></a>
+              <a href="https://www.whatsapp.com" className="bg-green-600 p-2 rounded text-white"><FaWhatsapp /></a>
+              <a href="https://www.instagram.com" className="bg-pink-600 p-2 rounded text-white"><FaInstagram /></a>
+              <a href="https://www.facebook.com" className="bg-red-600 p-2 rounded text-white"><FaFacebookF /></a>
             </div>
           </div>
         </div>

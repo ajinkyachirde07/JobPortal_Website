@@ -95,7 +95,7 @@ const JobDescription = () => {
             </div>
           </div>
 
-          {/* {user?.role === "student" && (
+          {user?.role === "student" && (
             <Button
               onClick={isApplied ? null : applyJobHandler}
               disabled={isApplied}
@@ -107,7 +107,7 @@ const JobDescription = () => {
             >
               {isApplied ? "Already Applied" : "Apply Now"}
             </Button>
-          )} */}
+          )}
         </div>
 
         

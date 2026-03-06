@@ -20,7 +20,6 @@ const JobDescription = () => {
     ) || false;
 
   const [isApplied, setIsApplied] = useState(isInitiallyApplied);
-  const [loading, setLoading] = useState(true);
 
   const params = useParams();
   const jobId = params.id;
@@ -51,7 +50,6 @@ const JobDescription = () => {
   useEffect(() => {
     const fetchSingleJob = async () => {
       try {
-        setLoading(true);
         const res = await axios.get(`${JOB_API_END_POINT}/get/${jobId}`, {
           withCredentials: true,
         });
@@ -65,8 +63,6 @@ const JobDescription = () => {
         }
       } catch (error) {
         console.log(error);
-      } finally {
-        setLoading(false);
       }
     };
     fetchSingleJob();

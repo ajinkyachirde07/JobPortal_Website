@@ -10,6 +10,7 @@ import { toast } from "sonner";
 import Navbar from "./shared/Navbar";
 import Footer from "./shared/Footer";
 
+
 const JobDescription = () => {
   const { singleJob } = useSelector((store) => store.job);
   const { user } = useSelector((store) => store.auth);
@@ -152,7 +153,7 @@ const JobDescription = () => {
                 <strong>
                   Join our WhatsApp Channel{" "}
                   <a
-                    href="https://www.whatsapp.com/channel/0029Vb5pzqx9Gv7NQVii641u"
+                    href="https://www.whatsapp.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

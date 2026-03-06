@@ -13,7 +13,7 @@ export default function Disclaimer() {
         <div className="md:col-span-2 space-y-6">
           <h1 className="text-3xl font-bold">Disclaimer</h1>
           <p>
-            Welcome to <span className="font-semibold">Jobcode</span>. By using
+            Welcome to <span className="font-semibold">HireNext Job Platform</span>. By using
             our website, you acknowledge and agree to this disclaimer. If you do
             not agree with any part of this disclaimer, please do not use our
             site.
@@ -108,8 +108,8 @@ export default function Disclaimer() {
             <p>
                If you have any concerns or questions regarding this disclaimer, please contact us at: </p>
 
-               <p>📧 Email: info@jobcode.in</p> 
-               <p>🌐 Website: www.jobcode.in </p>  
+               <p>📧 Email: info@HireNext.in</p> 
+               <p>🌐 Website: www.HireNext.in </p>  
           </div>
         </div>
 
@@ -119,10 +119,10 @@ export default function Disclaimer() {
           <div className="border rounded-lg shadow p-4">
             <h3 className="text-lg font-bold mb-3">Follow Us</h3>
             <div className="flex flex-col space-y-3">
-              <a href="#" className="bg-green-500 text-white text-center py-2 rounded-full">Join WhatsApp</a>
-              <a href="#" className="bg-blue-600 text-white text-center py-2 rounded-full">Join Telegram</a>
-              <a href="#" className="bg-pink-500 text-white text-center py-2 rounded-full">Instagram</a>
-              <a href="#" className="bg-black text-white text-center py-2 rounded-full">LinkedIn</a>
+              <a href="https://www.whatsapp.com" className="bg-green-500 text-white text-center py-2 rounded-full">Join WhatsApp</a>
+              <a href="https://www.telegram.com" className="bg-blue-600 text-white text-center py-2 rounded-full">Join Telegram</a>
+              <a href="https://www.instagram.com" className="bg-pink-500 text-white text-center py-2 rounded-full">Instagram</a>
+              <a href="https://linkedin.com" className="bg-black text-white text-center py-2 rounded-full">LinkedIn</a>
             </div>
           </div>
 

@@ -16,10 +16,10 @@ export default function PrivacyPolicy() {
         <div className="md:col-span-2 space-y-6">
           <h1 className="text-3xl font-bold">Privacy Policy</h1>
           <p>
-            Welcome to <span className="font-semibold">Jobcode!</span> Your
+            Welcome to <span className="font-semibold"> HireNext Job Platform!</span> Your
             privacy is important to us. This Privacy Policy explains how we
             collect, use, and protect your personal information when you use our
-            website <span className="font-semibold">www.jobcode.in</span>.
+            website <span className="font-semibold">www.HireNext.in</span>.
           </p>
 
           {/* Section 1 */}
@@ -130,8 +130,8 @@ export default function PrivacyPolicy() {
           <div>
             <h2 className="text-xl font-semibold">10. Contact Us</h2>
             <p>
-              📧 Email: info@jobcode.in <br />
-              🌐 Website: www.jobcode.in
+              📧 Email: info@HireNext.in <br />
+              🌐 Website: www.HireNext.in
             </p>
           </div>
         </div>
@@ -142,10 +142,10 @@ export default function PrivacyPolicy() {
           <div className="border rounded-lg shadow p-4">
             <h3 className="text-lg font-bold mb-3">Follow Us</h3>
             <div className="flex flex-col space-y-3">
-              <a href="#" className="bg-green-500 text-white text-center py-2 rounded-full">Join WhatsApp</a>
-              <a href="#" className="bg-blue-600 text-white text-center py-2 rounded-full">Join Telegram</a>
-              <a href="#" className="bg-pink-500 text-white text-center py-2 rounded-full">Instagram</a>
-              <a href="#" className="bg-black text-white text-center py-2 rounded-full">LinkedIn</a>
+              <a href="https://www.whatsapp.com/" className="bg-green-500 text-white text-center py-2 rounded-full">Join WhatsApp</a>
+              <a href="https://telegram.com" className="bg-blue-600 text-white text-center py-2 rounded-full">Join Telegram</a>
+              <a href="https://www.instagram.com/" className="bg-pink-500 text-white text-center py-2 rounded-full">Instagram</a>
+              <a href="https://www.linkedin.com" className="bg-black text-white text-center py-2 rounded-full">LinkedIn</a>
             </div>
           </div>
 

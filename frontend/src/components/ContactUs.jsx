@@ -15,7 +15,7 @@ export default function ContactUs() {
         <div className="lg:col-span-2 space-y-6">
           <h1 className="text-3xl font-bold">Contact Us</h1>
           <p>
-            At <span className="font-semibold">Jobcode</span>, we are committed 
+            At <span className="font-semibold">HireNext</span>, we are committed 
             to helping job seekers stay updated with the latest job openings, coding roadmaps, 
             and career tips. If you have any questions, suggestions, or need support, feel free to 
             reach out to us.
@@ -26,7 +26,7 @@ export default function ContactUs() {
             <h2 className="text-xl font-semibold">📧 Email Support</h2>
             <p className="mt-1">
               For general inquiries, support, or partnership opportunities, contact us at: <br />
-              <span className="font-semibold text-blue-600">info@jobcode.in</span>
+              <span className="font-semibold text-blue-600">info@HireNext.in</span>
             </p>
           </div>
 
@@ -35,10 +35,10 @@ export default function ContactUs() {
             <h2 className="text-xl font-semibold">🌐 Social Media</h2>
             <p className="mt-1">Stay connected with us on social media for the latest updates:</p>
             <ul className="list-disc list-inside text-blue-600 mt-2 space-y-1">
-              <li><a href="#">Facebook: facebook.com/jobcodeteam</a></li>
-              <li><a href="#">Instagram: instagram.com/jobcodeteam</a></li>
-              <li><a href="#">Twitter (X): twitter.com/jobcodeteam</a></li>
-              <li><a href="#">LinkedIn: linkedin.com/company/jobcode</a></li>
+              <li><a href="facbook.com">Facebook: facebook.com/</a></li>
+              <li><a href="instagram.com">Instagram: instagram.com/</a></li>
+              <li><a href="x.com">Twitter (X): twitter.com/</a></li>
+              <li><a href="linkedin.com">LinkedIn: linkedin.com/company</a></li>
             </ul>
           </div>
 
@@ -46,8 +46,8 @@ export default function ContactUs() {
           <div>
             <h2 className="text-xl font-semibold">📢 Join Our Groups</h2>
             <ul className="mt-2 space-y-1">
-              <li>👉 Join WhatsApp: <a href="#" className="text-blue-600 font-semibold">Click Here</a></li>
-              <li>👉 Follow Telegram: <a href="#" className="text-blue-600 font-semibold">Click Here</a></li>
+              <li>👉 Join WhatsApp: <a href="whatsapp.com" className="text-blue-600 font-semibold">Click Here</a></li>
+              <li>👉 Follow Telegram: <a href="telegram.com" className="text-blue-600 font-semibold">Click Here</a></li>
             </ul>
           </div>
 
@@ -80,16 +80,16 @@ export default function ContactUs() {
           <div className="p-4 border rounded-xl shadow-sm">
             <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
             <div className="space-y-3">
-              <a href="#" className="flex items-center bg-green-500 text-white px-4 py-2 rounded-lg">
+              <a href="whatsapp.com" className="flex items-center bg-green-500 text-white px-4 py-2 rounded-lg">
                 <FaWhatsapp className="mr-2" /> Join WhatsApp
               </a>
-              <a href="#" className="flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg">
+              <a href="telegram.com" className="flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg">
                 <FaTelegram className="mr-2" /> Join Telegram
               </a>
-              <a href="#" className="flex items-center bg-pink-500 text-white px-4 py-2 rounded-lg">
+              <a href="instagram.com" className="flex items-center bg-pink-500 text-white px-4 py-2 rounded-lg">
                 <FaInstagram className="mr-2" /> Instagram
               </a>
-              <a href="#" className="flex items-center bg-black text-white px-4 py-2 rounded-lg">
+              <a href="linkedin.com" className="flex items-center bg-black text-white px-4 py-2 rounded-lg">
                 <FaLinkedin className="mr-2" /> LinkedIn
               </a>
             </div>

@@ -117,10 +117,10 @@ export default function Footer() {
         {/* Logo + Description */}
         <div>
           <h2 className="text-2xl font-bold mb-3">
-            <span className="text-red-500">&lt;Tech</span>Change/&gt;
+            <span className="text-red-500">&lt;HireNext</span>Platform/&gt;
           </h2>
           <p className="text-gray-700 text-sm leading-relaxed">
-            <span className="font-bold">TechChange</span> provides the latest{" "}
+            <span className="font-bold">HireNext</span> provides the latest{" "}
             <span className="font-semibold">tech job updates, coding roadmaps, resume tips, and career growth insights</span>. 
             We ensure you get <span className="font-semibold">verified opportunities</span> and valuable resources to build a successful career.
           </p>
@@ -160,11 +160,11 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex gap-3">
-              <a href="#" className="bg-blue-600 p-2 rounded text-white"><FaLinkedinIn /></a>
-              <a href="#" className="bg-black p-2 rounded text-white"><FaTelegramPlane /></a>
-              <a href="#" className="bg-green-600 p-2 rounded text-white"><FaWhatsapp /></a>
-              <a href="#" className="bg-pink-600 p-2 rounded text-white"><FaInstagram /></a>
-              <a href="#" className="bg-red-600 p-2 rounded text-white"><FaFacebookF /></a>
+              <a href="likedin.com" className="bg-blue-600 p-2 rounded text-white"><FaLinkedinIn /></a>
+              <a href="telegram.com" className="bg-black p-2 rounded text-white"><FaTelegramPlane /></a>
+              <a href="whatsapp.com" className="bg-green-600 p-2 rounded text-white"><FaWhatsapp /></a>
+              <a href="instagram.com" className="bg-pink-600 p-2 rounded text-white"><FaInstagram /></a>
+              <a href="facebook.com" className="bg-red-600 p-2 rounded text-white"><FaFacebookF /></a>
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className=" pb-4 text-center text-gray-600 text-sm">
-        TechChange • Copyright © {new Date().getFullYear()} • All rights reserved
+        HireNext • Copyright © {new Date().getFullYear()} • All rights reserved
       </div>
     </footer>
   );

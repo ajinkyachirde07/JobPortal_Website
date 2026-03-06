@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setSearchedQuery } from '@/redux/jobSlice';
 import useGetAllJobs from '@/hooks/useGetAllJobs';
 
+
 const Browse = () => {
     useGetAllJobs();
     const { allJobs } = useSelector(store => store.job);
@@ -35,4 +36,7 @@ const Browse = () => {
     )
 }
 
-export default Browse
+export default Browse 
+
+
+

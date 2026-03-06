@@ -22,4 +22,4 @@ const useGetAppliedJobs = () => {
         fetchAppliedJobs();
     },[])
 };
-export default useGetAppliedJobs;
+export default useGetAppliedJobs; 

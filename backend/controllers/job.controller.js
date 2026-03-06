@@ -45,14 +45,6 @@ export const postJob = async (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
 // student k liye
 export const getAllJobs = async (req, res) => {
     try {

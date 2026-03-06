@@ -30,6 +30,7 @@ const Job = ({ job }) => {
                 {/* <Button variant="outline" className="rounded-full self-end sm:self-auto" size="icon">
                     <Bookmark />
                 </Button> */}
+                
             </div>
 
             {/* Company Info */}
